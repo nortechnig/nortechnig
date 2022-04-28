@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    li{
+        @apply p-4 
+    }
+    button {
+        @apply text-white bg-primary border border-primary rounded-md
+    }
+  
+}
+.active{
+    position:relative;
+    cursor: pointer;
+    }
+    .active::after{
+        content:'';
+        position:absolute;
+        width:80%;
+        height:0.175rem;
+        background:#00B53C;
+        left: 0;
+        bottom: 0;
+        
+    }
+    .active-left::after{
+        transform: scale(0, 1); 
+        transition: transform 0.3s ease;
+    }   
+     .active-left:hover::after{
+         transform: scale(1, 1);
+
+     }
+   .read-more{
+     width: 50%;
+     align-items: center;  
+   }
+.active-section{
+    position:relative;
+    }
+    .active-section::after{
+        content:'';
+        position:absolute;
+        width:80px;
+        height:0.175rem;
+        background:#CFCFCF;
+        margin-left: -150px;
+        margin-top: 50px;
+      
+        
+    }
